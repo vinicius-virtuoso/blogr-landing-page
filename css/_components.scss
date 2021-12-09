@@ -1,0 +1,58 @@
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.button {
+  width: 120px;
+  padding: 1.4rem 1rem;
+  border: 0;
+  margin: 0.2rem;
+  background: transparent;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 0;
+  transition: all 0.3s ease;
+
+  &.button--login {
+    font-family: $font-family-Over;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  &.primary {
+    background-image: $Intro-CTA-mobile-nav;
+    color: $White-text;
+    font-size: 1.1rem;
+    font-family: $font-family-Over;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+@media (min-width: 780px) {
+  .button {
+    width: 130px;
+
+    &.button--login {
+      font-family: $font-family-Over;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: $White-text;
+      width: 100px;
+    }
+
+    &.primary {
+      background: $White-text;
+      color: $Light-red-CTA-text;
+      &:hover {
+        background: hsla(0, 0%, 100%, 0.4);
+        color: $White-text;
+      }
+    }
+  }
+}

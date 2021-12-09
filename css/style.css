@@ -122,7 +122,10 @@ h3,
 h4,
 h5,
 h6,
-div {
+div,
+ul,
+ol,
+figure {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -131,5 +134,409 @@ div {
 
 html {
   font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.button {
+  width: 120px;
+  padding: 1.4rem 1rem;
+  border: 0;
+  margin: 0.2rem;
+  background: transparent;
+  border-radius: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button.button--login {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.button.primary {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.button.primary:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 780px) {
+  .button {
+    width: 130px;
+  }
+  .button.button--login {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    width: 100px;
+  }
+  .button.primary {
+    background: white;
+    color: #ff525d;
+  }
+  .button.primary:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+}
+
+.header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+  padding-top: 1rem;
+}
+
+.header .header__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(40px, 40px);
+      grid-template-columns: 1fr minmax(40px, 40px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+  position: relative;
+  gap: 10px;
+}
+
+.header .header__container .box__logo {
+  max-width: 80px;
+}
+
+.menu__btn {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__btn .btn__line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__btn.open__btn .btn__line:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+          transform: rotate(-45deg) translate(-5px, 4px);
+}
+
+.menu__btn.open__btn .btn__line:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.menu__btn.open__btn .btn__line:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-10px, -10px);
+          transform: rotate(45deg) translate(-10px, -10px);
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__nav .nav__menu {
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  background: white;
+  justify-self: center;
+  -webkit-transform: translateX(-50%) scale(0.5);
+          transform: translateX(-50%) scale(0.5);
+  opacity: 0;
+  -webkit-box-shadow: 0 8px 15px -10px #4b5862;
+          box-shadow: 0 8px 15px -10px #4b5862;
+  border-radius: 0.3rem;
+  padding: 2rem;
+  pointer-events: none;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.header__nav .nav__menu .nav__box__links {
+  width: 100%;
+}
+
+.header__nav .nav__menu .nav__box__links li {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__nav .nav__menu .nav__box__links li .nav__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #25252d;
+}
+
+.header__nav .nav__menu .nav__box__links li .nav__item i {
+  font-size: 12px;
+  margin-left: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #ff525d;
+}
+
+.header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show ~ .menu__link__nav {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  padding: 1rem 0;
+}
+
+.header__nav .nav__menu.menu__open {
+  -webkit-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1);
+  opacity: 1;
+  pointer-events: fill;
+}
+
+.header__nav .nav__menu .box__login__signup {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 2px solid #c8c8cb;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav .nav__menu .menu__link__nav {
+  width: 100%;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: #f0f0f0;
+  border-radius: 0.3rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__nav .nav__menu .menu__link__nav .link-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #25252d;
+}
+
+@media (min-width: 780px) {
+  .menu__btn {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    height: 120px;
+  }
+  .header .header__container {
+    -ms-grid-columns: minmax(100px, 110px) 1fr;
+        grid-template-columns: minmax(100px, 110px) 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .header__container .box__logo {
+    max-width: 110px;
+  }
+  .header .header__container .nav__menu {
+    opacity: 1;
+    position: initial;
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15% auto;
+        grid-template-columns: 15% auto;
+    padding: 0;
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    pointer-events: all;
+  }
+  .header .header__container .nav__menu .nav__box__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header .header__container .nav__menu .nav__box__links li {
+    position: relative;
+  }
+  .header .header__container .nav__menu .nav__box__links .nav__item {
+    color: white;
+    font-weight: 500;
+    min-width: 130px;
+    max-width: 130px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 0;
+  }
+  .header .header__container .nav__menu .nav__box__links .nav__item i {
+    font-size: 10px;
+    margin-left: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  .header .header__container .nav__menu .nav__box__links .menu__link__nav {
+    position: absolute;
+    background: white;
+    -webkit-box-shadow: 0 8px 15px -10px #4b5862;
+            box-shadow: 0 8px 15px -10px #4b5862;
+  }
+  .header .header__container .nav__menu .box__login__signup {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

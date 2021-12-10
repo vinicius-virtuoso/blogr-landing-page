@@ -8,8 +8,8 @@ $btnMenu.addEventListener('click', () => {
   $btnMenu.classList.toggle('open__btn');
   $navMenu.classList.toggle('menu__open');
 })
-$navItems.forEach((navLinks) => {
-  navLinks.addEventListener('click', () => {
-    navLinks.classList.toggle('sub__menu__show');
+$navItems.forEach((navLinks, index) => {
+  navLinks.addEventListener('click', ({ target }) => {
+    target.classList.toggle('sub__menu__show');
   })
 })

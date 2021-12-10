@@ -194,7 +194,7 @@ img {
   .button.button--login {
     font-family: "Overpass", sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     width: 100px;
   }
@@ -203,6 +203,7 @@ img {
     color: #ff525d;
   }
   .button.primary:hover {
+    opacity: 1;
     background: rgba(255, 255, 255, 0.4);
     color: white;
   }
@@ -357,25 +358,31 @@ img {
   color: #25252d;
 }
 
-.header__nav .nav__menu .nav__box__links li .nav__item i {
-  font-size: 12px;
-  margin-left: 5px;
+.header__nav .nav__menu .nav__box__links li .nav__item::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/icon-arrow-dark.svg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0.5rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: #ff525d;
 }
 
 .header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show {
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-decoration: underline;
 }
 
-.header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show i {
+.header__nav .nav__menu .nav__box__links li .nav__item.sub__menu__show::after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transform: rotate(180deg);
@@ -502,11 +509,18 @@ img {
   .header .header__container .nav__menu .nav__box__links li {
     position: relative;
   }
+  .header .header__container .nav__menu .nav__box__links li .nav__item.sub__menu__show ~ .menu__link__nav {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 160px;
+    opacity: 1;
+    padding: 1rem 0.5rem;
+  }
   .header .header__container .nav__menu .nav__box__links .nav__item {
     color: white;
-    font-weight: 500;
-    min-width: 130px;
-    max-width: 130px;
+    font-weight: 600;
+    min-width: 120px;
+    max-width: 120px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -515,19 +529,42 @@ img {
         -ms-flex-align: center;
             align-items: center;
     line-height: 0;
+    font-size: 1rem;
+    opacity: 0.8;
   }
-  .header .header__container .nav__menu .nav__box__links .nav__item i {
-    font-size: 10px;
-    margin-left: 5px;
+  .header .header__container .nav__menu .nav__box__links .nav__item::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("../images/icon-arrow-light.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.5rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: white;
   }
   .header .header__container .nav__menu .nav__box__links .menu__link__nav {
     position: absolute;
     background: white;
     -webkit-box-shadow: 0 8px 15px -10px #4b5862;
             box-shadow: 0 8px 15px -10px #4b5862;
+  }
+  .header .header__container .nav__menu .nav__box__links .menu__link__nav .link-item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    opacity: 0.7;
+    font-weight: 500;
+    -webkit-transition: none;
+    transition: none;
+    padding: 0.7rem 1.5rem;
+  }
+  .header .header__container .nav__menu .nav__box__links .menu__link__nav .link-item:hover {
+    opacity: 1;
+    font-weight: 700;
+    -webkit-transition: none;
+    transition: none;
   }
   .header .header__container .nav__menu .box__login__signup {
     -webkit-box-orient: horizontal;

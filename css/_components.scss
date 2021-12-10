@@ -41,7 +41,7 @@
     &.button--login {
       font-family: $font-family-Over;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: $White-text;
       width: 100px;
     }
@@ -50,6 +50,7 @@
       background: $White-text;
       color: $Light-red-CTA-text;
       &:hover {
+        opacity: 1;
         background: hsla(0, 0%, 100%, 0.4);
         color: $White-text;
       }

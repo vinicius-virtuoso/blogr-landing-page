@@ -93,20 +93,26 @@
           transition: all 0.3s ease;
           color: $Very-dark-black-blue-footer-background;
 
-          i {
-            font-size: 12px;
-            margin-left: 5px;
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-image: url("../images/icon-arrow-dark.svg");
+            background-position: top center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 0.5rem;
             transition: all 0.3s ease;
-            color: $Light-red-CTA-text;
           }
 
           &.sub__menu__show {
-            opacity: 0.5;
+            opacity: 1;
             transition: all 0.3s ease;
             position: relative;
             display: flex;
+            text-decoration: underline;
 
-            i {
+            &::after {
               transition: all 0.3s ease;
               transform: rotate(180deg);
             }
@@ -202,28 +208,58 @@
 
           li {
             position: relative;
+
+            .nav__item.sub__menu__show ~ .menu__link__nav {
+              -webkit-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+              width: 160px;
+              opacity: 1;
+              padding: 1rem 0.5rem;
+            }
           }
 
           .nav__item {
             color: $White-text;
-            font-weight: 500;
-            min-width: 130px;
-            max-width: 130px;
+            font-weight: 600;
+            min-width: 120px;
+            max-width: 120px;
             width: 100%;
             display: flex;
             align-items: center;
             line-height: 0;
-            i {
-              font-size: 10px;
-              margin-left: 5px;
+            font-size: 1rem;
+            opacity: 0.8;
+
+            &::after {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background-image: url("../images/icon-arrow-light.svg");
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              margin-left: 0.5rem;
               transition: all 0.3s ease;
-              color: $White-text;
             }
           }
           .menu__link__nav {
             position: absolute;
             background: $White-text;
             box-shadow: 0 8px 15px -10px $Very-dark-grayish-blue-body-copy;
+
+            .link-item {
+              justify-content: flex-start;
+              opacity: 0.7;
+              font-weight: 500;
+              transition: none;
+              padding: 0.7rem 1.5rem;
+
+              &:hover {
+                opacity: 1;
+                font-weight: 700;
+                transition: none;
+              }
+            }
           }
         }
 

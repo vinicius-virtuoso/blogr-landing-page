@@ -152,7 +152,7 @@ img {
   border: 0;
   margin: 0.2rem;
   background: transparent;
-  border-radius: 3rem;
+  border-radius: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,13 +181,37 @@ img {
   font-size: 1.1rem;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
+  margin-right: 0.5rem;
 }
 
 .button.primary:hover {
   opacity: 0.7;
 }
 
-@media (min-width: 780px) {
+.button.primary.button--button_hero {
+  max-width: 100%;
+  font-size: 1rem;
+  padding: 1.3rem 0.5rem;
+  background: white;
+  color: #ff525d;
+}
+
+.button.secondary {
+  max-width: 100%;
+  font-size: 1rem;
+  padding: 1.3rem 0.5rem;
+  font-weight: 700;
+  border: 1px solid white;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.button.secondary:hover {
+  background: white;
+  color: #ff525d;
+}
+
+@media (min-width: 760px) {
   .button {
     width: 130px;
   }
@@ -201,11 +225,57 @@ img {
   .button.primary {
     background: white;
     color: #ff525d;
+    margin-right: 1rem;
   }
   .button.primary:hover {
-    opacity: 1;
     background: rgba(255, 255, 255, 0.4);
     color: white;
+  }
+  .button.primary.button--button_hero {
+    width: 200px;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 2rem 0.5rem;
+    background: white;
+    color: #ff525d;
+  }
+  .button.secondary {
+    width: 200px;
+    padding: 2rem 0.5rem;
+    margin-left: 1rem;
+  }
+  .button.secondary:hover {
+    background: white;
+    color: #ff525d;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button {
+    width: 130px;
+  }
+  .button.primary {
+    background: white;
+    color: #ff525d;
+    margin-right: 1rem;
+  }
+  .button.primary.button--button_hero {
+    width: 160px;
+    max-width: 100%;
+    font-size: 1.3rem;
+    padding: 1.8rem 0.5rem;
+    background: white;
+    color: #ff525d;
+  }
+  .button.secondary {
+    width: 160px;
+    padding: 1.8rem 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+  }
+  .button.secondary:hover {
+    background: white;
+    color: #ff525d;
   }
 }
 
@@ -214,8 +284,6 @@ img {
           box-sizing: border-box;
   width: 100%;
   height: 90px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
-  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   padding-top: 1rem;
 }
 
@@ -295,7 +363,7 @@ img {
   position: absolute;
   left: 50%;
   top: 90px;
-  width: 90%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,6 +390,7 @@ img {
   pointer-events: none;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  z-index: 999;
 }
 
 .header__nav .nav__menu .nav__box__links {
@@ -461,7 +530,7 @@ img {
   color: #25252d;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 760px) {
   .menu__btn {
     display: none;
   }
@@ -574,6 +643,121 @@ img {
     border: 0;
     margin: 0;
     padding: 0;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  margin-top: -120px;
+  border-bottom-left-radius: 120px;
+  background: url("../images/bg-pattern-intro-mobile.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(to right, #ff8f70, #ff3d54);
+  background-position: 40% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 300%;
+  padding: 2rem 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .hero__title {
+  font-size: 2.1rem;
+  font-family: "Overpass", sans-serif;
+  color: white;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.hero .hero__text {
+  font-size: 1rem;
+  font-family: "Overpass", sans-serif;
+  color: white;
+  font-weight: 200;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.hero .hero__box__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 760px) {
+  .hero {
+    border-bottom-left-radius: 200px;
+    background: url("../images/bg-pattern-intro-desktop.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, #ff8f70, #ff3d54);
+    background-position: 40% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 300%;
+  }
+  .hero .hero__title {
+    font-size: 3.1rem;
+    font-family: "Overpass", sans-serif;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .hero .hero__text {
+    font-size: 1.3rem;
+    font-family: "Overpass", sans-serif;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    text-align: center;
+  }
+  .hero .hero__box__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    border-bottom-left-radius: 200px;
+    background: url("../images/bg-pattern-intro-desktop.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, #ff8f70, #ff3d54);
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 165%;
+  }
+  .hero .hero__title {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+  .hero .hero__text {
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -162,6 +162,16 @@ img {
   border-radius: 0px;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 .container {
   max-width: 1220px;
   margin: 0 auto;

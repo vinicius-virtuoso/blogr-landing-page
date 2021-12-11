@@ -398,6 +398,7 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+        justify-content: space-between;
 
         .section-03__figure {
           max-width: 50%;
@@ -406,6 +407,7 @@
         .section-03__text {
           align-self: center;
           height: 1vh;
+          width: 50%;
 
           .hero__title {
             text-align: left;

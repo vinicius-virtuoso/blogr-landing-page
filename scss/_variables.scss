@@ -6,7 +6,7 @@ $Very-dark-blue-headings: hsl(208, 49%, 24%);
 
 // ### Neutral
 
-$White-text: hsl(0, 0%, 100%);
+$White-text: #ffffff;
 $Grayish-blue-footer-text: hsl(240, 2%, 79%);
 $Very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
 $Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
@@ -15,8 +15,8 @@ $Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
 
 $Intro-CTA-mobile-nav: linear-gradient(
   to right,
-  hsl(13, 100%, 72%),
-  hsl(353, 100%, 62%)
+  hsl(13, 100%, 72%) 20%,
+  hsl(353, 100%, 62%) 60%
 );
 $gradient-body: linear-gradient(
   to right,

@@ -219,3 +219,16 @@
     letter-spacing: -1px;
   }
 }
+@media screen and (max-width: 320px) {
+  .hero {
+    .container__hero {
+      padding: 1rem;
+      .hero__title {
+        font-size: 2rem;
+      }
+      p.hero__text {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

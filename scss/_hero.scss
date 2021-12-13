@@ -1,11 +1,11 @@
 .hero {
-  height: calc(100vh - 120px);
+  height: 100vh;
   margin-top: -120px;
 }
 
 .container__hero {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   border-bottom-left-radius: 120px;
   background: url("../images/bg-pattern-intro-mobile.svg"),
     $Intro-CTA-mobile-nav;
@@ -35,6 +35,7 @@
     width: 100%;
   }
 }
+
 @media (min-width: 760px) {
   .container__hero {
     border-bottom-left-radius: 200px;
